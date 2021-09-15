@@ -58,6 +58,7 @@ func Start(ctx *cli.Context) {
 	for i := 0; i < cnt; i++ {
 		index := i
 		go func() {
+			time.Sleep(time.Millisecond * 10)
 			DialWS(index, url)
 		}()
 	}
